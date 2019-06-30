@@ -1,12 +1,14 @@
 <div class="app-tabs">
-  <mat-tab-group headerPosition="below" color="primary">
+  <mat-tab-group headerPosition="below" color="primary" [selectedIndex]="2">
 
     <mat-tab>
         <ng-template mat-tab-label>
           <mat-icon>build</mat-icon>
           Skill Map
         </ng-template>
-      Skill Map
+        <ng-template matTabContent>
+            <app-skill-map></app-skill-map>
+        </ng-template>
     </mat-tab>
 
     <mat-tab>
@@ -14,7 +16,9 @@
           <mat-icon>code</mat-icon>
           Projects
         </ng-template>
-      Projects
+        <ng-template matTabContent>
+            <app-projects></app-projects>
+        </ng-template>
     </mat-tab>
 
     <mat-tab>
@@ -22,7 +26,9 @@
           <mat-icon>face</mat-icon>
           About Me
         </ng-template>
-      About Me
+        <ng-template matTabContent>
+            <app-about-me></app-about-me>
+        </ng-template>
     </mat-tab>
 
     <mat-tab>
@@ -30,7 +36,9 @@
           <mat-icon>work</mat-icon>
           Work Experience
         </ng-template>
-        Work Experience
+        <ng-template matTabContent>
+            <app-work-experience></app-work-experience>
+        </ng-template>
     </mat-tab>
 
     <mat-tab>
@@ -38,7 +46,9 @@
           <mat-icon>chat_bubble_outline</mat-icon>
           Contact Me
         </ng-template>
-      Contact Me
+        <ng-template matTabContent>
+            <app-contact-me></app-contact-me>
+        </ng-template>
     </mat-tab>
 
   </mat-tab-group>
