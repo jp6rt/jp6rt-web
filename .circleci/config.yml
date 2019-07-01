@@ -8,15 +8,14 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Show the current branch
-        command: echo ${CIRCLE_BRANCH}
+          name: Show the current branch
+          command: echo ${CIRCLE_BRANCH}
       - run:
-        name: Install local dependencies
-        command: npm install
+          name: Install local dependencies
+          command: npm install
       - run:
-        name: Linting
-        command: npm run lint
+          name: Linting
+          command: npm run lint
       - run:
-        name: Testing
-        command: npm run test
-        
+          name: Testing
+          command: npm run test
