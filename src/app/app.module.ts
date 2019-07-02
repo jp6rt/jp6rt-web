@@ -6,14 +6,17 @@ import { AppRoutingModule } from './app-routing.module';
 import {
   MatTabsModule,
   MatIconModule,
-  MatStepperModule
+  MatStepperModule,
+  MatCardModule
 } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 import { AppComponent } from './app.component';
-import { SkillMapComponent } from './skill-map/skill-map.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { AboutMeComponent } from './about-me/about-me.component';
-import { WorkExperienceComponent } from './work-experience/work-experience.component';
-import { ContactMeComponent } from './contact-me/contact-me.component';
+import { SkillMapComponent } from './tabs/skill-map/skill-map.component';
+import { ProjectsComponent } from './tabs/projects/projects.component';
+import { AboutMeComponent } from './tabs/about-me/about-me.component';
+import { WorkExperienceComponent } from './tabs/work-experience/work-experience.component';
+import { ContactMeComponent } from './tabs/contact-me/contact-me.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,9 @@ import { ContactMeComponent } from './contact-me/contact-me.component';
     BrowserAnimationsModule,
     MatTabsModule,
     MatIconModule,
-    MatStepperModule
+    MatStepperModule,
+    MatCardModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
