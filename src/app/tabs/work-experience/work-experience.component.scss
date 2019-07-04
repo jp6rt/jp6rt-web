@@ -1,4 +1,10 @@
 .experience-container {
-  min-width: 380px;
-  min-height: 500px;
+  width: 380px;
+  height: 500px;
+  padding: 16px;
+
+  h2 {
+    font-size: 2em;
+    font-weight: 500;
+  }
 }

@@ -1,8 +1,10 @@
 <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="25px">
 
   <ng-container *ngFor="let experience of workExperiences">
-    <mat-card class="experience-container mat-elevation-z4">
-      
+    <mat-card class="experience-container" [style.background]="experience.color">
+      <h2 [innerHTML]="experience.company"></h2>
+      <p [innerHTML]="experience.position"></p>
+      <p [innerHTML]="experience.description"></p>
     </mat-card>
   </ng-container>
 
