@@ -1,10 +1,20 @@
 .experience-container {
   width: 380px;
-  height: 500px;
+  height: 450px;
   padding: 16px;
 
   h2 {
     font-size: 2em;
     font-weight: 500;
+    margin: 0;
+  }
+
+  .details {
+    position: relative;
+
+    .duration {
+      position: absolute;
+      bottom: 0;
+    }
   }
 }

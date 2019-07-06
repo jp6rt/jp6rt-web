@@ -1,10 +1,20 @@
 <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="25px">
 
   <ng-container *ngFor="let experience of workExperiences">
-    <mat-card class="experience-container" [style.background]="experience.color">
-      <h2 [innerHTML]="experience.company"></h2>
-      <p [innerHTML]="experience.position"></p>
-      <p [innerHTML]="experience.description"></p>
+    <mat-card 
+      class="experience-container" 
+      [style.background]="experience.color"
+      fxLayout="column">        
+        <div>
+          <h2 [innerHTML]="experience.company"></h2>
+          <h3 [innerHTML]="experience.position"></h3>
+        </div>
+        <div fxFlex class="details">
+          <p [innerHTML]="experience.description"></p>
+          <div class="duration">
+            <p [innerHTML]="experience.duration"></p>
+          </div>
+        </div>
     </mat-card>
   </ng-container>
 
