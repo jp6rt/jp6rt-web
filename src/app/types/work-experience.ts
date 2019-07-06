@@ -1,10 +1,10 @@
 // tslint:disable:typedef-whitespace
 
-export class WorkExperience {
-  company           : string;
-  position             : string;
-  technologies   : string[];
-  description      : string;
-  duration           : string;
-  color                  : string;
+export default class WorkExperience {
+  company: string;
+  position: string;
+  technologies: string[];
+  responsibilities: string[];
+  duration: string;
+  color: string;
 }

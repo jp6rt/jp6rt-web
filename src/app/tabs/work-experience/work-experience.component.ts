@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { WorkExperience } from '../../types/work-experience';
-
-import faker from 'faker';
+import WorkExperience from '../../types/work-experience';
+import { WorkExperienceService } from '../../services/work-experience.service';
 
 @Component({
   selector: 'app-work-experience',
@@ -12,36 +11,15 @@ export class WorkExperienceComponent implements OnInit {
 
   public workExperiences: WorkExperience[];
 
+  constructor(
+    private workExperienceService: WorkExperienceService
+  ) {  }
+
   /**
    * OnInit lifecycle hook
    */
   ngOnInit() {
-    this.workExperiences = [
-      {
-        company: 'SSI',
-        color: 'rgb(214,30,68,0.5)',
-        position: 'Survey Programmer',
-        technologies: [],
-        description: faker.lorem.sentences(10),
-        duration: 'March 2011 - June 2012'
-      },
-      {
-        company: 'Sizmek',
-        color: 'rgb(0,105,255,0.5)',
-        position: 'Tier III Support Engineer',
-        technologies: [],
-        description: faker.lorem.sentences(10),
-        duration: 'March 2011 - June 2012'
-      },
-      {
-        company: 'Arcanys',
-        color: 'rgb(121,38,255,0.5)',
-        position: 'Web Developer',
-        technologies: [],
-        description: faker.lorem.sentences(10),
-        duration: 'Current'
-      }
-    ];
+    this.workExperiences = this.workExperienceService.getWorkExperiences();
   }
 
 }

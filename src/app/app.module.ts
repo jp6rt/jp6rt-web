@@ -33,7 +33,6 @@ import { ContactMeComponent } from './tabs/contact-me/contact-me.component';
     BrowserAnimationsModule,
     MatTabsModule,
     MatIconModule,
-    MatStepperModule,
     MatCardModule,
     FlexLayoutModule
   ],

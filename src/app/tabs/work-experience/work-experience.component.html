@@ -2,7 +2,7 @@
 
   <ng-container *ngFor="let experience of workExperiences">
     <mat-card 
-      class="experience-container" 
+      class="experience-container mat-elevation-z8" 
       [style.background]="experience.color"
       fxLayout="column">        
         <div>
@@ -10,7 +10,15 @@
           <h3 [innerHTML]="experience.position"></h3>
         </div>
         <div fxFlex class="details">
-          <p [innerHTML]="experience.description"></p>
+          <div class="responsibilities">
+            <p class="label" [innerHTML]="'Responsibilities'"></p>
+            <ul>
+              <li *ngFor="let item of experience.responsibilities">
+                {{ item }}
+              </li>
+            </ul>
+          </div>
+
           <div class="duration">
             <p [innerHTML]="experience.duration"></p>
           </div>
