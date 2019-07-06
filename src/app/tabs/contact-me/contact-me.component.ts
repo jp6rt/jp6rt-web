@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-me',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactMeComponent implements OnInit {
 
-  constructor() { }
+  public form: FormGroup;
 
+  constructor(
+    private formBuilder: FormBuilder
+  ) { }
+
+  /**
+   * OnInit lifecycle hook
+   */
   ngOnInit() {
+    this.form = this.formBuilder.group({
+      message: []
+    });
   }
 
 }

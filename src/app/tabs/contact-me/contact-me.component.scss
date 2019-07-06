@@ -1,0 +1,26 @@
+@import '~@angular/material/theming';
+
+.content {
+  width: 800px;
+  height: 750px;
+
+  .notes {
+    background: map-get($mat-teal, 500);
+  }
+
+  .send-message {
+    padding: 16px;
+
+    h2 {
+      font-weight: 500;
+    }
+
+    .mat-form-field {
+      width: 100%;
+
+      textarea {
+        height: 150px;
+      }
+    }
+  }
+}

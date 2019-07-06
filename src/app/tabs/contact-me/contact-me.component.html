@@ -1,1 +1,18 @@
-<p>contact-me works!</p>
+<div class="content mat-elevation-z4" fxLayout="column">
+  <div fxFlex class="notes"></div>
+  <div fxFlex class="send-message">
+    <h2>Send a message</h2>
+    <form [formGroup]="form">
+
+      <mat-form-field appearance="outline">
+        <mat-label>You can leave a message with your contact information so I can get back to you</mat-label>
+        <textarea matInput formControlName="message"></textarea>
+      </mat-form-field>
+
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <button mat-raised-button color="accent">Send</button>
+      </div>
+
+    </form>
+  </div>
+</div>
