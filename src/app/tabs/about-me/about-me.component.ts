@@ -19,7 +19,7 @@ export class AboutMeComponent implements OnInit {
     this.summary = `"I"m a web developer and a tech enthusiast. 
       I"ve been in the tech industry for 9 years, from a php developer to a javascript developer and now slowly transitioning to golang"`;
 
-    this.hobbies = `"Gundam, Anime, Microcontrollers, Learning new technology"`;
+    this.hobbies = `"Gundam, Anime, Microcontrollers, Exploring new technology"`;
 
     // tslint:disable-next-line:no-trailing-whitespace
     this.availability = `"Will work for dog food. Seriously, we have dogs to feed, so I work as a freelance developer on my free time. 
