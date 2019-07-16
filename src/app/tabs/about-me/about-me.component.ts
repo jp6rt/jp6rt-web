@@ -16,7 +16,7 @@ export class AboutMeComponent implements OnInit {
    */
   ngOnInit() {
     // tslint:disable-next-line:no-trailing-whitespace
-    this.summary = `"I"m a web developer and a tech enthusiast. 
+    this.summary = `"I'm a web developer and a tech enthusiast. 
       I"ve been in the tech industry for 9 years, from a php developer to a javascript developer and now slowly transitioning to golang"`;
 
     this.hobbies = `"Gundam, Anime, Microcontrollers, Exploring new technology"`;
