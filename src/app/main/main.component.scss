@@ -13,4 +13,16 @@
       text-align: right;
     }
   }
+
+  .tech-badges {
+    .mat-icon {
+      width: 75px;
+      height: 75px;
+      
+      svg {
+        width: 75px;
+        height: 75px;
+      }
+    }
+  }
 }
