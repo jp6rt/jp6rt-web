@@ -1,0 +1,33 @@
+@import "src/app/scss/variables";
+
+.go-get {
+  color: white;
+  font-size: 2em;
+  
+  .ws {
+    font-weight: 600;
+    margin-right: 10px;
+  }
+
+  .cmd {
+    p {            
+      white-space: nowrap;
+      overflow: hidden;
+      animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+      border-right: .25em solid $blue;
+      padding-right: 4px;
+    }
+
+    @keyframes typing {
+      from { width: 0;  }
+      to { width: 100%;  }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: $blue; }
+    }
+  }
+}

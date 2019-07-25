@@ -21,7 +21,7 @@ $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
         background: map-get($mat-green, 900);
       }
 
-      &.content {
+      &.close {
         p {
           color: map-get($mat-green, 900);
           background: map-get($app-primary, 50);

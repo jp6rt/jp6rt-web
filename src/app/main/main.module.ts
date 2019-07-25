@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { MainComponent } from './main.component';
+import { TopComponent } from './top/top.component';
 
 @NgModule({
   declarations: [
-    MainComponent
+    MainComponent,
+    TopComponent
   ],
   imports: [
     CommonModule,
