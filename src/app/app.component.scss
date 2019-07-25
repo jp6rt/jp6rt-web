@@ -16,9 +16,13 @@
   left: calc(50% - 47.5vw);
   top: 5vh;
 
-  .info {
-    width: 600px;
-    height: 100%;
-    background: white;
+  .main {
+    height: 90vh;
+  }
+
+  .console {
+    width: 50%;
+    height: 70vh;
+    border-radius: 8px;
   }
 }

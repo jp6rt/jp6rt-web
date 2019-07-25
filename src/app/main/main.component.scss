@@ -1,0 +1,50 @@
+@import "src/app/scss/variables";
+
+:host {
+  .main {
+    max-width: 650px;
+    .jp6-h1 {
+      p {
+        font-weight: normal;
+        font-size: 4em;
+        padding: 4px;
+        margin: 0;
+        display: inline-block;
+      }
+    }
+
+    .top {
+      .go-get {
+        color: white;
+        font-size: 2em;
+        
+        .ws {
+          font-weight: 600;
+          margin-right: 10px;
+        }
+
+        .cmd {
+          p {            
+            white-space: nowrap;
+            overflow: hidden;
+            animation: 
+              typing 3.5s steps(40, end),
+              blink-caret .75s step-end infinite;
+            border-right: .15em solid $blue;
+            padding-right: 4px;
+          }
+
+          @keyframes typing {
+            from { width: 0;  }
+            to { width: 100%;  }
+          }
+
+          @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: $blue; }
+          }
+        }
+      }
+    }
+  }
+}
