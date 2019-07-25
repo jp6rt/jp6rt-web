@@ -1,45 +1,8 @@
-<div class="app-tabs">
-  <mat-tab-group headerPosition="above" color="primary" [selectedIndex]="4">
+<div class="bg-header"></div>
 
-    <mat-tab>
-        <ng-template mat-tab-label>
-          <mat-icon>build</mat-icon>
-          Skill Map
-        </ng-template>
-        <ng-template matTabContent>
-            <app-skill-map></app-skill-map>
-        </ng-template>
-    </mat-tab>
+<div class="app" fxLayout="row" fxLayoutAlign="space-between center">
 
-    <mat-tab>
-        <ng-template mat-tab-label>
-          <mat-icon>face</mat-icon>
-          About Me
-        </ng-template>
-        <ng-template matTabContent>
-            <app-about-me></app-about-me>
-        </ng-template>
-    </mat-tab>
+  <div class="console"></div>
+  <div class="info"></div>
 
-    <mat-tab>
-        <ng-template mat-tab-label>
-          <mat-icon>work</mat-icon>
-          Work Experience
-        </ng-template>
-        <ng-template matTabContent>
-            <app-work-experience></app-work-experience>
-        </ng-template>
-    </mat-tab>
-
-    <mat-tab>
-        <ng-template mat-tab-label>
-          <mat-icon>chat_bubble_outline</mat-icon>
-          Get In Touch
-        </ng-template>
-        <ng-template matTabContent>
-            <app-contact-me></app-contact-me>
-        </ng-template>
-    </mat-tab>
-
-  </mat-tab-group>
 </div>
