@@ -1,7 +1,7 @@
 @import '~@angular/material/theming';
 
 $app-primary: mat-palette($mat-grey, 900);
-$app-accent:  mat-palette($mat-deep-orange, 900);
+$app-accent:  mat-palette($mat-blue, 500);
 $app-warn:    mat-palette($mat-red);
 $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 
@@ -18,12 +18,12 @@ $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
     .jp6-h1 {
       p {
         color: white;
-        background: map-get($mat-green, 900);
+        background: map-get($mat-blue, 500);
       }
 
       &.close {
         p {
-          color: map-get($mat-green, 900);
+          color: map-get($mat-blue, 500);
           background: map-get($app-primary, 50);
         }
       }
@@ -38,8 +38,22 @@ $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
     }
   }
 
+  .content {
+    .stack {
+      .info {
+        h1 {
+          color: map-get($mat-blue, 500);
+        }
+      }
+    }
+
+    .stack-bottom {
+      background: map-get($mat-blue, 500);
+    }
+  }
+
   .console {
     background: map-get($mat-blue-grey, 900);
-    @include mat-elevation(8);
+    @include mat-elevation(2);
   }
 }

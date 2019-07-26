@@ -1,0 +1,23 @@
+  <div fxLayout="row" fxLayoutAlign="center center" class="stack" [class.position-1]="stack.position">
+    <ng-container *ngIf="stack.position">
+      <div class="info" fxLayout="column" fxLayoutAlign="center start">
+        <h1>{{ stack.header }}</h1> 
+        <p>{{ stack.text }}</p>
+      </div>
+    </ng-container>
+    
+    <div class="icon">
+      <mat-icon [svgIcon]="stack.icon"></mat-icon>
+    </div>
+    
+    <ng-container *ngIf="!stack.position">
+      <div class="info" fxLayout="column" fxLayoutAlign="center start">
+        <h1>{{ stack.header }}</h1> 
+        <p>{{ stack.text }}</p>
+      </div>
+    </ng-container>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="center center" *ngIf="!stack.hideBorder">
+  <div class="stack-bottom"></div>
+</div>

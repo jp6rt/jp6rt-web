@@ -20,5 +20,6 @@ export class MainComponent {
     iconRegistry.addSvgIcon('docker', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/docker.svg'));
     iconRegistry.addSvgIcon('mongodb', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/mongodb.svg'));
     iconRegistry.addSvgIcon('nodejs', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/nodejs.svg'));
+    iconRegistry.addSvgIcon('uiux', sanitizer.bypassSecurityTrustResourceUrl('assets/images/ui-ux.svg'));
   }
 }

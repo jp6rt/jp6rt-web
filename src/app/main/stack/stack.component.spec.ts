@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SkillMapComponent } from './skill-map.component';
+import { StackComponent } from './stack.component';
 
-describe('SkillMapComponent', () => {
-  let component: SkillMapComponent;
-  let fixture: ComponentFixture<SkillMapComponent>;
+describe('StackComponent', () => {
+  let component: StackComponent;
+  let fixture: ComponentFixture<StackComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SkillMapComponent ]
+      declarations: [ StackComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SkillMapComponent);
+    fixture = TestBed.createComponent(StackComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,5 +1,11 @@
+@import "src/app/scss/variables";
+@import "src/app/scss/mixins";
+
 .main {
-  max-width: 650px;
+  .top {
+    height: calc(300px - 5vh);
+  }
+  /* max-width: 650px; */
   .jp6-h1 {
     p {
       font-weight: normal;
@@ -16,13 +22,20 @@
 
   .tech-badges {
     .mat-icon {
-      width: 75px;
-      height: 75px;
-      
+      @include resize-mat-icon(48px);
+      margin-right: 24px;
+
       svg {
-        width: 75px;
-        height: 75px;
+        @include resize-mat-icon(48px);
       }
+    }
+  }
+
+  .stack .mat-icon {
+    @include resize-mat-icon(300px);
+
+    svg {
+      @include resize-mat-icon(300px);
     }
   }
 }
