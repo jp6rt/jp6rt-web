@@ -21,5 +21,6 @@ export class MainComponent {
     iconRegistry.addSvgIcon('mongodb', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/mongodb.svg'));
     iconRegistry.addSvgIcon('nodejs', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/nodejs.svg'));
     iconRegistry.addSvgIcon('uiux', sanitizer.bypassSecurityTrustResourceUrl('assets/images/ui-ux.svg'));
+    iconRegistry.addSvgIcon('cicd', sanitizer.bypassSecurityTrustResourceUrl('assets/images/ci-cd.svg'));
   }
 }

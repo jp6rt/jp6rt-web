@@ -1,6 +1,6 @@
-  <div fxLayout="row" fxLayoutAlign="center center" class="stack" [class.position-1]="stack.position">
+  <div fxLayout="row" class="stack" [class.position-1]="stack.position">
     <ng-container *ngIf="stack.position">
-      <div class="info" fxLayout="column" fxLayoutAlign="center start">
+      <div class="info" fxLayout="column" fxLayoutAlign="center start" fxFlex>
         <h1>{{ stack.header }}</h1> 
         <p>{{ stack.text }}</p>
       </div>
@@ -11,7 +11,7 @@
     </div>
     
     <ng-container *ngIf="!stack.position">
-      <div class="info" fxLayout="column" fxLayoutAlign="center start">
+      <div class="info" fxLayout="column" fxLayoutAlign="center start" fxFlex>
         <h1>{{ stack.header }}</h1> 
         <p>{{ stack.text }}</p>
       </div>
