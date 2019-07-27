@@ -20,7 +20,7 @@ export class ContentComponent {
       position: 1,
       header: 'Back-end Services',
       text: 'Develop back-end and data services using Go, NodeJS, SQL and NoSQL Databases.',
-      icon: 'uiux'
+      icon: 'backend'
     },
     {
       position: 0,

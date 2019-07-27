@@ -22,5 +22,6 @@ export class MainComponent {
     iconRegistry.addSvgIcon('nodejs', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/nodejs.svg'));
     iconRegistry.addSvgIcon('uiux', sanitizer.bypassSecurityTrustResourceUrl('assets/images/ui-ux.svg'));
     iconRegistry.addSvgIcon('cicd', sanitizer.bypassSecurityTrustResourceUrl('assets/images/ci-cd.svg'));
+    iconRegistry.addSvgIcon('backend', sanitizer.bypassSecurityTrustResourceUrl('assets/images/back-end.svg'));
   }
 }
