@@ -1,0 +1,21 @@
+<div fxLayout="row" fxLayoutAlign="space-between center">
+  <p>Message</p>
+  <button mat-button color="accent" (click)="close()">
+    <mat-icon>close</mat-icon>
+    Cancel
+  </button>
+</div>
+
+<form [formGroup]="form">
+  <mat-form-field appearance="outline">
+    <mat-label>Leave a message</mat-label>
+    <textarea matInput formControlName="message"></textarea>
+  </mat-form-field>
+</form>
+
+<div fxLayout="row" fxLayoutAlign="center center">
+  <button mat-raised-button color="accent" (click)="send()" [disabled]="!form.valid">
+    <mat-icon>send</mat-icon>
+    Send
+  </button>
+</div>

@@ -1,37 +1,30 @@
-%flex-centered {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+@import "src/app/scss/variables";
+
+.bg-header {
+  height: $top-height;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
-.app-tabs {
-  .mat-tab-labels {
-    justify-content: center;
+.app {
+  position: absolute;
+  z-index: 2;
+  width: 95vw;
+  min-height: 90vh;
+  position: 0;
+  left: calc(50% - 47.5vw);
+  top: 5vh;
+
+  .main {
+    min-height: 90vh;
   }
 
-  .mat-tab-body-content {
-    height: calc(100vh - 60px);
-    @extend %flex-centered;
-
-    > * {
-      height: 100%;
-      width: 100%;
-      padding: 16px;
-      @extend %flex-centered;
-    }
-  }
-
-  .mat-tab-label-content {
-    font-size: 1.5em;
-    font-weight: 600;
-
-    .mat-icon {
-      margin-right: 10px;
-    }
-  }
-
-  .mat-ink-bar {
-    height: 5px;
+  .console {
+    width: 50%;
+    height: 70vh;
+    border-radius: 8px;
   }
 }

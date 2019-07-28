@@ -1,0 +1,5 @@
+@mixin resize-mat-icon($px) {
+  width: $px;
+  height: $px;
+  font-size: $px;
+}

@@ -1,0 +1,56 @@
+.stack {
+  width: 1000px;
+  margin-top: 12px;
+
+  .info {
+    h1, p {
+      font-weight: 400;
+      padding: 0 0 0 24px;
+      margin: 8px 0;
+    }
+
+    p {
+      font-size: 16px;   
+    }
+  }
+
+  &.position-1 {
+    .info {
+      h1, p {
+        padding: 0 24px 0 ;
+      }
+    }
+  }
+}
+
+.stack-bottom {
+  width: 50%;
+  height: 1px;
+  opacity: 0.25;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .stack {
+    flex-direction: column !important;
+    width: 90vw;
+
+    .info {
+      align-items: center !important;
+
+      h1, p {
+        padding: 0 0 24px 0;
+      }
+
+      p {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media only screen and (max-device-width : 1024px) {
+  .stack {
+    width: 90vw;
+  }
+}
+

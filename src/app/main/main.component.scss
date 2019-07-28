@@ -1,0 +1,57 @@
+@import "src/app/scss/variables";
+@import "src/app/scss/mixins";
+
+.main {
+  .top {
+    height: calc(300px - 5vh);
+  }
+  /* max-width: 650px; */
+  .jp6-h1 {
+    p {
+      font-weight: normal;
+      font-size: 4em;
+      padding: 4px;
+      margin: 0;
+      display: inline-block;
+    }
+
+    &.close {
+      text-align: right;
+    }
+  }
+
+  .tech-badges {
+    .mat-icon {
+      @include resize-mat-icon(48px);
+      margin-right: 24px;
+
+      svg {
+        @include resize-mat-icon(48px);
+      }
+    }
+
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+      .mat-icon {
+        @include resize-mat-icon(24px);
+        margin-right: 12px;
+  
+        svg {
+          @include resize-mat-icon(24px);
+        }
+      }
+    }
+  }
+
+  .stack .mat-icon {
+    @include resize-mat-icon(300px);
+
+    svg {
+      @include resize-mat-icon(300px);
+    }
+  }
+}
+
+.message-dialog {
+  width: 90%;
+  max-width: 1000px !important;
+}
