@@ -31,3 +31,22 @@
     }
   }
 }
+
+.tech-badges {
+  margin: 8px 0;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .go-get {
+    font-size: 1.2em;
+  }
+
+  .tech-badges {
+    margin: 24px 0;
+    place-content: center center !important;
+  }
+
+  .actions {
+    place-content: center center !important;
+  }
+}
