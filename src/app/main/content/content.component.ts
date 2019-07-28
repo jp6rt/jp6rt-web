@@ -19,7 +19,8 @@ export class ContentComponent {
     {
       position: 1,
       header: 'Back-end Services',
-      text: 'Develop back-end and data services using Go, NodeJS, SQL and NoSQL Databases.',
+      text: `Develop back-end and data services using Go and NodeJS using a relational
+                and non-relational database appropriate for your needs`,
       icon: 'backend'
     },
     {

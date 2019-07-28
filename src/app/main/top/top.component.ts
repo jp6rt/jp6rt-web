@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MessageDialogService } from '../services/message-dialog.service';
 
 @Component({
   selector: 'app-top',
@@ -7,8 +8,16 @@ import { Component } from '@angular/core';
 })
 export class TopComponent {
 
+  constructor(
+    private messageDialogService: MessageDialogService
+  ) { }
+
   openGithub(): void {
     window.open('https://github.com/jp6rt');
+  }
+
+  openMessage(): void {
+    this.messageDialogService.open();
   }
 
 }

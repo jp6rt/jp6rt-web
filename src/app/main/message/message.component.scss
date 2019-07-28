@@ -1,0 +1,15 @@
+:host {
+  .mat-form-field {
+    min-height: 200px;
+    width: 100%;
+
+    textarea {
+      min-height: 145px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
