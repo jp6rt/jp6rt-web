@@ -2,7 +2,7 @@
     <ng-container *ngIf="stack.position">
       <div class="info" fxLayout="column" fxLayoutAlign="center start" fxFlex>
         <h1>{{ stack.header }}</h1> 
-        <p>{{ stack.text }}</p>
+        <p *ngFor="let text of stack.info">{{ text }}</p>
       </div>
     </ng-container>
     
@@ -13,7 +13,7 @@
     <ng-container *ngIf="!stack.position">
       <div class="info" fxLayout="column" fxLayoutAlign="center start" fxFlex>
         <h1>{{ stack.header }}</h1> 
-        <p>{{ stack.text }}</p>
+        <p *ngFor="let text of stack.info">{{ text }}</p>
       </div>
     </ng-container>
 </div>

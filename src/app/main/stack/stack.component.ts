@@ -13,12 +13,10 @@ export class StackComponent implements OnInit {
     this.setPosition();
 
     window.addEventListener('resize', () => {
-      console.log('resize');
       this.setPosition();
     });
 
     window.addEventListener('orientationchange', () => {
-      console.log('orientationchange');
       this.setPosition();
     });
   }

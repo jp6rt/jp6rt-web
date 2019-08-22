@@ -13,20 +13,27 @@ export class ContentComponent {
     {
       position: 0,
       header: 'UI/UX Development',
-      text: 'Front end web application development with Angular 2+.',
+      info: [
+        'Provide user friendly interface on web and mobile environments',
+        'Develop mobile and web applications using Angular and Ionic',
+      ],
       icon: 'uiux'
     },
     {
       position: 1,
       header: 'Back-end Services',
-      text: `Develop back-end and data services using Go and NodeJS using a relational
-                and non-relational database appropriate for your needs.`,
+      info: [
+        'Provide reliable, scalable and secure web services with AWS stack',
+      ],
       icon: 'backend'
     },
     {
       position: 0,
       header: 'DevOps',
-      text: 'Continous integration and deployment with Gitlab CI, Circle CI. Deploy services on Amazon Web Services.',
+      info: [
+        'Continuous deployment and integration with Gitlab or Cicle CI',
+        'Design and monitor infrastructure on AWS'
+      ],
       icon: 'cicd',
       hideBorder: true
     }

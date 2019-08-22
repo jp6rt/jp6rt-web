@@ -48,6 +48,13 @@
     svg {
       @include resize-mat-icon(300px);
     }
+
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+      @include resize-mat-icon(250px);
+      svg {
+        @include resize-mat-icon(250px);
+      } 
+    }    
   }
 }
 
