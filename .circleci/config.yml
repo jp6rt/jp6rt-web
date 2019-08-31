@@ -52,8 +52,20 @@ jobs:
       - checkout
       - install_dependencies
       - run:
+          name: Build production
+          command: ng build --prod --aot
+      - add_ssh_keys:
+          fingerprints:
+            - "ed:58:5d:5e:61:e4:8a:f5:42:f6:94:d8:68:46:39:59"
+      - run:
           name: Check git remote
-          command: git -vT git@${remote}
+          command: |
+            mkdir deploy && cd deploy
+            git init && git remote add origin ${remote}
+            git pull origin master
+            mv ../dist/portfolio/* ./
+            git add -A && git commit -m "Build {{ checksum "package-lock.json" }}-{{ .BuildNum }}"
+            git push origin master
 
 workflows:
   version: 2.1
