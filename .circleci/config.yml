@@ -68,7 +68,7 @@ jobs:
             rm -rf *
             mv ../dist/portfolio/* ./
             git add -A
-            git commit -m "Build {{ checksum "package-lock.json" }}-{{ .BuildNum }}"
+            git commit -m "Build ${CIRCLE_SHA1}"
             git push origin master
 
 workflows:
