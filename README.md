@@ -14,4 +14,4 @@ Website URL: [https://jp6rt.github.io](https://jp6rt.github.io)
 
 ### Backend microservices
 
-Repository: [https:github.com/jp6rt/jp6rt-web-messages](https:github.com/jp6rt/jp6rt-web-messages)
+Repository: [https://github.com/jp6rt/jp6rt-web-messages](https://github.com/jp6rt/jp6rt-web-messages)
