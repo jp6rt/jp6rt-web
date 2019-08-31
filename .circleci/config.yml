@@ -1,4 +1,14 @@
-version: 2
+version: 2.1
+
+commands:
+  install_dependencies:
+    steps:
+      - restore_cache:
+          keys: 
+            - dependency-cache-{{ checksum "package-lock.json" }}-{{ .BuildNum }}
+      - run:
+          name: Install local dependencies
+          command: npm install
 
 jobs:
   build:
@@ -10,37 +20,46 @@ jobs:
       - run:
           name: Show the current branch
           command: echo ${CIRCLE_BRANCH}
-      - restore_cache:
-          keys: 
-            - dependency-cache-{{ checksum "package.json" }}
-      - run:
-          name: Install local dependencies
-          command: npm install
+      - install_dependencies
       - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-{{ checksum "package-lock.json" }}-{{ .BuildNum }}
           paths:
             - ./node_modules
+      - run:
+          name: Check ng
+          command: npx ng version
   test:
-    working_director: ~/app
+    working_directory: ~/app
     docker:
       - image: circleci/node:10.9-browsers
     steps:
       - checkout
-      - restore_cache:
-          keys: 
-            - dependency-cache-{{ checksum "package.json" }}
+      - install_dependencies
       - run:
           name: Lint
           command: npm run lint
       - run:
           name: Test
           command: npm run test
+  deploy:
+    working_directory: ~/app
+    docker:
+      - image: circleci/node:10.9-browsers
+    steps:
+      - checkout
+      - install_dependencies
+      - run:
+          name: Check git remote
+          command: git -vT git@${remote}
 
 workflows:
-  version: 2
+  version: 2.1
   build_test_deploy:
     jobs:
       - build
-      - test
+      - test:
           requires:
             - build
+      - deploy:
+          requires:
+            - test
