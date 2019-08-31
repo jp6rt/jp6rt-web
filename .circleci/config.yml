@@ -63,7 +63,7 @@ jobs:
             mkdir deploy && cd deploy
             git init && git remote add origin ${remote}
             git pull origin master
-            rm -rf ./ && mv ../dist/portfolio/* ./
+            rm -rf * && mv ../dist/portfolio/* ./
             git add -A && git commit -m "Build {{ checksum "package-lock.json" }}-{{ .BuildNum }}"
             git push origin master
 
