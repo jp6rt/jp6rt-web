@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  messagesEndpoint: 'https://rq59mh8z46.execute-api.ap-southeast-1.amazonaws.com/dev/messages'
+  messagesEndpoint: 'https://89a2rjpcfl.execute-api.ap-southeast-1.amazonaws.com/dev/messages'
 };
 
 /*
