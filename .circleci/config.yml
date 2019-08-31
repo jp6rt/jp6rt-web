@@ -1,5 +1,11 @@
 version: 2.1
 
+executors:
+  default_executor:
+    working_directory: ~/app
+    docker:
+      - image: circleci/node:10.9-browsers
+
 commands:
   install_dependencies:
     steps:
@@ -12,9 +18,8 @@ commands:
 
 jobs:
   build:
-    working_directory: ~/app
-    docker:
-      - image: circleci/node:10.9-browsers
+    executor:
+      name: default_executor
     steps:
       - checkout
       - run:
@@ -29,9 +34,8 @@ jobs:
           name: Check ng
           command: npx ng version
   test:
-    working_directory: ~/app
-    docker:
-      - image: circleci/node:10.9-browsers
+    executor:
+      name: default_executor
     steps:
       - checkout
       - install_dependencies
@@ -42,9 +46,8 @@ jobs:
           name: Test
           command: npm run test
   deploy:
-    working_directory: ~/app
-    docker:
-      - image: circleci/node:10.9-browsers
+    executor:
+      name: default_executor
     steps:
       - checkout
       - install_dependencies
