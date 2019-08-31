@@ -4,9 +4,11 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatIconModule, MatButtonModule, MatTooltipModule, MatDialogModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+// tslint:disable-next-line:max-line-length
+import { MatIconModule, MatButtonModule, MatTooltipModule, MatDialogModule, MatFormFieldModule, MatInputModule, MatSnackBarModule } from '@angular/material';
 
 import { MessageDialogService } from './services/message-dialog.service';
+import { MessageService } from './services/message.service';
 
 import { MainComponent } from './main.component';
 import { TopComponent } from './top/top.component';
@@ -33,7 +35,8 @@ import { MessageComponent } from './message/message.component';
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSnackBarModule
   ],
   exports: [
     MainComponent
@@ -42,7 +45,8 @@ import { MessageComponent } from './message/message.component';
     MessageComponent
   ],
   providers: [
-    MessageDialogService
+    MessageDialogService,
+    MessageService
   ]
 })
 export class MainModule { }

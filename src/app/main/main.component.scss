@@ -62,3 +62,15 @@
   width: 90%;
   max-width: 1000px !important;
 }
+
+.message-sent-notification, .message-error-notification {
+  font-weight: 600;
+  background: green;
+  span {
+    text-align: center;
+  }
+
+  &.message-error-notification {
+    background: red;
+  }
+}
