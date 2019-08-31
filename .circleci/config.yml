@@ -1,15 +1,5 @@
 version: 2.1
 
-commands:
-  install_dependencies:
-    steps:
-      - restore_cache:
-          keys: 
-            - dependency-cache-{{ checksum "package-lock.json" }}-{{ .BuildNum }}
-      - run:
-          name: Install local dependencies
-          command: npm install
-
 jobs:
   build:
     working_directory: ~/app
@@ -29,7 +19,7 @@ jobs:
           name: Check ng
           command: npx ng version
   test:
-    working_director: ~/app
+    working_directory: ~/app
     docker:
       - image: circleci/node:10.9-browsers
     steps:
