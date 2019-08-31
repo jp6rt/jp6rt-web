@@ -20,6 +20,9 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
+      - run:
+          name: Check ng
+          command: npx ng version
   test:
     working_director: ~/app
     docker:
@@ -29,9 +32,6 @@ jobs:
       - restore_cache:
           keys: 
             - dependency-cache-{{ checksum "package.json" }}
-      - run:
-          name: Check ng
-          command: npx ng version
       - run:
           name: Lint
           command: npm run lint
