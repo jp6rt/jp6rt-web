@@ -1,5 +1,15 @@
 version: 2.1
 
+commands:
+  install_dependencies:
+    steps:
+      - restore_cache:
+          keys: 
+            - dependency-cache-{{ checksum "package-lock.json" }}-{{ .BuildNum }}
+      - run:
+          name: Install local dependencies
+          command: npm install
+
 jobs:
   build:
     working_directory: ~/app
