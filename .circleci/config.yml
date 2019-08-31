@@ -61,12 +61,14 @@ jobs:
           name: Deploy production build
           command: |
             mkdir deploy && cd deploy
-            git config --global user.email "jp01r7@gmail.com"
-            git config --global user.name "jp6rt"
-            git init && git remote add origin ${remote}
+            git config --global user.email "${GIT_REMOTE_EMAIL}"
+            git config --global user.name "${GIT_REMOTE_NAME}"
+            git init && git remote add origin ${GIT_REMOTE}
             git pull origin master
             rm -rf * && mv ../dist/portfolio/* ./
-            git add -A && git commit -m "Build {{ checksum "package-lock.json" }}-{{ .BuildNum }}"            
+            git add -A
+            git commit -m "Build {{ checksum "package-lock.json" }}-{{ .BuildNum }}"
+            git status
             git push origin master
 
 workflows:
