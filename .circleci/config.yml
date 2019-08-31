@@ -9,7 +9,6 @@ commands:
       - run:
           name: Install local dependencies
           command: npm install
-      
 
 jobs:
   build:
@@ -21,7 +20,7 @@ jobs:
       - run:
           name: Show the current branch
           command: echo ${CIRCLE_BRANCH}
-     - install_dependencies
+      - install_dependencies
       - save_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}-{{ .BuildNum }}
           paths:
