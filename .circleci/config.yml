@@ -68,7 +68,7 @@ jobs:
             rm -rf *
             mv ../dist/portfolio/* ./
             git add -A
-            git commit -m "Build ${CIRCLE_SHA1}"
+            git commit -m "Build Tag-${CIRCLE_TAG} ${CIRCLE_SHA1}"
             git push origin master
 
 workflows:
@@ -80,5 +80,10 @@ workflows:
           requires:
             - build
       - deploy:
+          filters:
+            branches:
+              only: master
+            tags:
+              only: /v.*/
           requires:
             - test
