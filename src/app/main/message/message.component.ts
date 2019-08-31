@@ -40,7 +40,8 @@ export class MessageComponent implements OnInit {
           this.snackBar.open('Message sent! If you provided a contact information, I will be sure to get in touch with you soon', null, {
             verticalPosition: 'top',
             horizontalPosition: 'center',
-            panelClass: 'message-sent-notification'
+            panelClass: 'message-sent-notification',
+            duration: 5e3
           });
           this.close();
         },
@@ -48,7 +49,8 @@ export class MessageComponent implements OnInit {
           this.snackBar.open('Sorry! There seems to be an error when sending a message at the moment', null, {
             verticalPosition: 'top',
             horizontalPosition: 'center',
-            panelClass: 'message-error-notification'
+            panelClass: 'message-error-notification',
+            duration: 5e3
           });
         }
       );
