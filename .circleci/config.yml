@@ -48,7 +48,7 @@ jobs:
     steps:
       - checkout
       - install_dependencies
-    - run
+    - run:
         name: Check git remote
         command: git -vT git@${remote}
 
