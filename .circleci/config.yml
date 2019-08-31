@@ -65,14 +65,10 @@ jobs:
             git config --global user.name "${GIT_REMOTE_NAME}"
             git init && git remote add origin ${GIT_REMOTE}
             git pull origin master
-            ls ./            
             rm -rf *
-            ls ../dist/portfolio
             mv ../dist/portfolio/* ./
-            ls ./
             git add -A
             git commit -m "Build {{ checksum "package-lock.json" }}-{{ .BuildNum }}"
-            git status
             git push origin master
 
 workflows:
