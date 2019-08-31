@@ -53,7 +53,7 @@ jobs:
       - install_dependencies
       - run:
           name: Build production
-          command: ng build --prod --aot
+          command: npx ng build --prod --aot
       - add_ssh_keys:
           fingerprints:
             - "ed:58:5d:5e:61:e4:8a:f5:42:f6:94:d8:68:46:39:59"
