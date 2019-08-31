@@ -81,8 +81,6 @@ workflows:
             - build
       - deploy:
           filters:
-            branches:
-              only: master
             tags:
               only: /v.*/
           requires:
