@@ -65,6 +65,8 @@ jobs:
             git pull origin master
             rm -rf * && mv ../dist/portfolio/* ./
             git add -A && git commit -m "Build {{ checksum "package-lock.json" }}-{{ .BuildNum }}"
+            git config --global user.email ${email}
+            git config --global user.username ${username}
             git push origin master
 
 workflows:
